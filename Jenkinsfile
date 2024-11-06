@@ -7,7 +7,7 @@ pipeline {
         jdk 'jdk_17'
     }
     environment{
-        JAVA_HOME = tool name: 'jdk_17', type: 'jdk'
+        JAVA_HOME = '/Users/kbalasub/.jenkins/tools/hudson.model.JDK/JDK_17/amazon-corretto-17.jdk/Contents/Home'
     }
 
     stages {
