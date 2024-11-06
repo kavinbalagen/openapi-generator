@@ -9,20 +9,16 @@ pipeline {
 
 
     stages {
-         
 
         stage("TEST") {
             steps {
                 sh 'mvn clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -pl modules/openapi-generator-cli -am'
             }
         }
-        post{
-            success{
-                archiveArtifacts 'modules/openapi-generator-cli/target/openapi-generator-cli.jar' , fingerprint: true
-            }
-        }
- 
-
     }
-
+    post{
+        success{
+            archiveArtifacts 'modules/openapi-generator-cli/target/openapi-generator-cli.jar' , fingerprint: true
+        }
+    }
 }
