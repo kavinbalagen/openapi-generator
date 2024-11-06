@@ -18,7 +18,7 @@ pipeline {
     }
     post{
         success{
-            archiveArtifacts 'modules/openapi-generator-cli/target/openapi-generator-cli.jar' , fingerprint: true
+            archiveArtifacts artifacts:'modules/openapi-generator-cli/target/openapi-generator-cli.jar' , fingerprint: true
         }
     }
 }
