@@ -6,11 +6,6 @@ pipeline {
         maven 'Maven'
         jdk 'jdk_17'
     }
-    environment{
-        JAVA_HOME = '/Users/kbalasub/.jenkins/tools/hudson.model.JDK/JDK_17/amazon-corretto-17.jdk/Contents/Home'
-    PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
-    }
-
     stages {
 
         stage("TEST") {
